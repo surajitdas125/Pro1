@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zomato Clone - Food & Diet Options</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    header {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-size: 1.8em;
+      color: #e23744;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: url('img.png') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .hero-text {
+      position: relative;
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1.2em;
+    }
+
+    .options-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .options-section h2 {
+      font-size: 2em;
+      margin-bottom: 40px;
+      color: #333;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      width: 260px;
+      height: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+
+    .card-title {
+      position: absolute;
+      bottom: 15px;
+      left: 20px;
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      padding: 30px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2em;
+        padding: 0 20px;
+      }
+
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Zomato</div>
+    <nav>
+      <ul>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Discover Food for Every Body</h1>
+      <p>Choose by craving or health condition</p>
+    </div>
+  </section>
+
+  <!-- Food & Disease Options -->
+  <section class="options-section">
+    <h2>Browse Options</h2>
+    <div class="cards-container">
+      
+      <!-- Food Option -->
+      <div class="card">
+        <img src="food option.jpeg" alt="Food Options">
+        <div class="card-title">By Food</div>
+      </div>
+
+      <!-- Disease Option -->
+      <div class="card">
+        <img src="disease.jpeg" alt="Disease Options">
+        <div class="card-title">By Disease</div>
+      </div>
+
+      <!-- Heart Healthy -->
+      <div class="card">
+        <img src="healthy.jpeg" alt="Heart Healthy">
+        <div class="card-title">Heart Healthy</div>
+      </div>
+
+      <!-- Weight Loss -->
+      <div class="card">
+        <img src="waight.jpeg" alt="Weight Loss">
+        <div class="card-title">Weight Loss</div>
+      </div>
+
+      <!-- Diabetes -->
+      <div class="card">
+        <img src="diabatise.jpeg" alt="Diabetes">
+        <div class="card-title">Diabetes Diet</div>
+      </div>
+
+      <!-- Vegan -->
+      <div class="card">
+        <img src="vegan.jpeg" alt="Vegan">
+        <div class="card-title">Vegan</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Zomato Clone | For Educational Purposes Only</p>
+  </footer>
+
+</body>
+</html>
